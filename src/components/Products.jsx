@@ -1,3 +1,4 @@
+import BookAddaLogo from './BookAddaLogo';
 import '../styles/Products.css';
 
 export default function Products() {
@@ -16,9 +17,7 @@ export default function Products() {
           <div className="product-card featured solo">
             <div className="product-glow"/>
             <div className="product-header">
-              <div className="product-icon-wrap">
-                <span className="product-emoji">📚</span>
-              </div>
+              <BookAddaLogo iconSize={52} textSize={22} />
               <div className="product-status-badge live">● Live Now</div>
             </div>
 

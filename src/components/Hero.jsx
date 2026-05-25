@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import logo from '../assets/logo.png';
+import BookAddaLogo from './BookAddaLogo';
 import '../styles/Hero.css';
 
 export default function Hero() {
@@ -107,12 +107,8 @@ export default function Hero() {
         <div className="hero-visual">
           <div className="hero-card-grid">
             <div className="float-card card-a">
-              <div className="card-icon">📚</div>
-              <div className="card-info">
-                <div className="card-title">BookAdda</div>
-                <div className="card-desc">Student Book Exchange</div>
-              </div>
-              <div className="card-badge live">Live</div>
+              <BookAddaLogo iconSize={30} textSize={13} />
+              <div className="card-badge live" style={{marginLeft: 'auto'}}>Live</div>
             </div>
             <div className="float-card card-b">
               <div className="card-icon">🏫</div>
@@ -129,7 +125,9 @@ export default function Hero() {
               </div>
             </div>
             <div className="center-logo-widget">
-              <img src={logo} alt="Quadminds" style={{ width: 70, height: 70, objectFit: 'contain', position: 'relative', zIndex: 2 }} />
+              <div style={{ position: 'relative', zIndex: 2 }}>
+                <BookAddaLogo iconSize={60} showText={false} />
+              </div>
               <div className="widget-ring ring-1"/>
               <div className="widget-ring ring-2"/>
             </div>
