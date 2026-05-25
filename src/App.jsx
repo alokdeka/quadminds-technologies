@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './styles/index.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -8,21 +9,50 @@ import WhyUs from './components/WhyUs';
 import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
+import RefundPolicy from './components/RefundPolicy';
+import SEO from './components/SEO';
 
-export default function App() {
+function HomePage() {
+  return (
+    <>
+      <SEO />
+      <Hero />
+      <About />
+      <Products />
+      <Vision />
+      <WhyUs />
+      <Team />
+      <Contact />
+    </>
+  );
+}
+
+function Layout() {
+  const location = useLocation();
+  const isLegal = ['/privacy', '/terms', '/refund'].includes(location.pathname);
+
   return (
     <>
       <Navbar />
       <main>
-        <Hero />
-        <About />
-        <Products />
-        <Vision />
-        <WhyUs />
-        <Team />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/refund" element={<RefundPolicy />} />
+        </Routes>
       </main>
       <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   );
 }

@@ -66,9 +66,7 @@ export default function Products() {
             </div>
 
             <a
-              href="https://bookadda.in"
-              target="_blank"
-              rel="noreferrer"
+              href="#"
               className="btn-product"
               id="bookadda-cta"
             >
