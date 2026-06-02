@@ -88,8 +88,8 @@ export default function Hero() {
 
           <div className="hero-stats">
             <div className="stat-item">
-              <span className="stat-num">1</span>
-              <span className="stat-label">Live Product</span>
+              <span className="stat-num">3</span>
+              <span className="stat-label">Live Products</span>
             </div>
             <div className="stat-divider"/>
             <div className="stat-item">

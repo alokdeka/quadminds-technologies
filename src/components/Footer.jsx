@@ -51,10 +51,11 @@ export default function Footer() {
               </ul>
             </div>
             <div className="footer-col">
-              <h4>Product</h4>
+              <h4>Products</h4>
               <ul>
-                <li><a href="#">BookAdda</a></li>
-                <li><a href={location.pathname === '/' ? "#product" : "/#product"} onClick={(e) => { e.preventDefault(); scrollTo('product'); }}>Features</a></li>
+                <li><a href={location.pathname === '/' ? "#product-bookadda" : "/#product-bookadda"} onClick={(e) => { e.preventDefault(); scrollTo('product-bookadda'); }}>BookAdda</a></li>
+                <li><a href="https://ghostnote.click/" target="_blank" rel="noopener noreferrer">GhostNote</a></li>
+                <li><a href="https://toonify-app.netlify.app/" target="_blank" rel="noopener noreferrer">Toonify</a></li>
               </ul>
             </div>
             <div className="footer-col">

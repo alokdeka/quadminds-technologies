@@ -66,8 +66,8 @@ export default function TermsOfService() {
           <section className="legal-section">
             <h2>5. Payments</h2>
             <p>
-              Payment processing on BookAdda is handled by <strong>Razorpay</strong>, a PCI-DSS compliant
-              third-party payment gateway. By making a payment on our platform, you agree to Razorpay's
+              Payment processing on BookAdda is handled by <strong>Cashfree</strong>, a PCI-DSS compliant
+              third-party payment gateway. By making a payment on our platform, you agree to Cashfree's
               terms and conditions in addition to these terms.
             </p>
             <ul>

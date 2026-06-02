@@ -51,7 +51,7 @@ export default function Navbar() {
           {['about','product','vision','team','contact'].map(id => (
             <li key={id}>
               <a href={location.pathname === '/' ? `#${id}` : `/#${id}`} className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo(id); }}>
-                {id === 'product' ? 'BookAdda' : id.charAt(0).toUpperCase() + id.slice(1)}
+                {id === 'product' ? 'Products' : id.charAt(0).toUpperCase() + id.slice(1)}
               </a>
             </li>
           ))}

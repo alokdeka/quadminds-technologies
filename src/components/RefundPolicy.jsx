@@ -63,7 +63,7 @@ export default function RefundPolicy() {
           <section className="legal-section">
             <h2>4. Failed / Duplicate Transactions</h2>
             <ul>
-              <li>If a payment fails but your account is debited, the amount will be auto-refunded by Razorpay within <strong>5–7 business days</strong>.</li>
+              <li>If a payment fails but your account is debited, the amount will be auto-refunded by Cashfree within <strong>5–7 business days</strong>.</li>
               <li>In case of a duplicate charge, please contact us immediately at <a href="mailto:support@quadmindstechnologies.in">support@quadmindstechnologies.in</a> with your transaction ID.</li>
               <li>Refunds for confirmed duplicate transactions will be processed within <strong>7–10 business days</strong>.</li>
             </ul>
@@ -83,7 +83,7 @@ export default function RefundPolicy() {
             <p>To request a refund, please email us with the following:</p>
             <ul>
               <li>Your registered email address</li>
-              <li>Razorpay Order ID or Payment ID</li>
+              <li>Cashfree Order ID or Payment ID</li>
               <li>Reason for the refund request</li>
               <li>Screenshot of the transaction (if available)</li>
             </ul>

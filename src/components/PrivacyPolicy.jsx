@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
               <li>Profile information such as university and location</li>
               <li>Book listing details including title, price, description, and photos</li>
               <li>Messages sent through the in-app chat</li>
-              <li>Payment information (processed securely via Razorpay; we do not store card details)</li>
+              <li>Payment information (processed securely via Cashfree; we do not store card details)</li>
               <li>Inquiries submitted through our contact form</li>
             </ul>
             <h3>2.2 Information Collected Automatically</h3>
@@ -63,7 +63,7 @@ export default function PrivacyPolicy() {
             <ul>
               <li>To create and manage your account</li>
               <li>To facilitate book listings, transactions, and communication between users</li>
-              <li>To process payments and verify transactions via Razorpay</li>
+              <li>To process payments and verify transactions via Cashfree</li>
               <li>To send transactional notifications (listing status, messages, payment receipts)</li>
               <li>To send push notifications (if you have granted permission)</li>
               <li>To improve our platform through analytics</li>
@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
             <h2>4. Sharing of Information</h2>
             <p>We do <strong>not</strong> sell your personal information. We may share data with:</p>
             <ul>
-              <li><strong>Razorpay:</strong> For payment processing. Subject to Razorpay's Privacy Policy.</li>
+              <li><strong>Cashfree:</strong> For payment processing. Subject to Cashfree's Privacy Policy.</li>
               <li><strong>Google Firebase:</strong> For push notification delivery.</li>
               <li><strong>Google reCAPTCHA:</strong> For bot protection on forms.</li>
               <li><strong>Law enforcement:</strong> If required by law or to protect the rights of users.</li>
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
             <h2>6. Security</h2>
             <p>
               We implement industry-standard security measures including HTTPS encryption, hashed
-              passwords, and token-based authentication. Payment data is handled exclusively by Razorpay's
+              passwords, and token-based authentication. Payment data is handled exclusively by Cashfree's
               PCI-DSS-compliant infrastructure.
             </p>
           </section>
