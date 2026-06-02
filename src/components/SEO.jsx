@@ -4,7 +4,7 @@ export default function SEO({
   title = "Quadminds Technologies", 
   description = "Quadminds Technologies crafts intelligent, scalable digital products that solve real problems — starting with India's student community.",
   path = "",
-  keywords = "Quadminds Technologies, BookAdda, tech startup, software development, student marketplace"
+  keywords = "Quadminds Technologies, BookAdda, GhostNote, Toonify, tech startup, software development, student marketplace, agentic AI"
 }) {
   const siteUrl = "https://quadmindstechnologies.in";
   const fullUrl = `${siteUrl}${path}`;

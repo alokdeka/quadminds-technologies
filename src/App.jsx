@@ -13,6 +13,9 @@ import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import RefundPolicy from './components/RefundPolicy';
+import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
+import BlogSection from './components/BlogSection';
 import SEO from './components/SEO';
 
 function HomePage() {
@@ -25,6 +28,7 @@ function HomePage() {
       <Vision />
       <WhyUs />
       <Team />
+      <BlogSection />
       <Contact />
     </>
   );
@@ -40,6 +44,8 @@ function Layout() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/refund" element={<RefundPolicy />} />

@@ -231,6 +231,8 @@ img { max-width: 100%; }
 }
 
 /* Light mode: mobile nav background */
-[data-theme="light"] .nav-links {
-  background: var(--bg);
+@media (max-width: 768px) {
+  [data-theme="light"] .nav-links {
+    background: var(--bg);
+  }
 }

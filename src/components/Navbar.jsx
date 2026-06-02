@@ -74,7 +74,7 @@ export default function Navbar() {
         </a>
 
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
-          {['about','product','vision','team','contact'].map(id => (
+          {['about','product','vision','team','blog','contact'].map(id => (
             <li key={id}>
               <a href={location.pathname === '/' ? `#${id}` : `/#${id}`} className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo(id); }}>
                 {id === 'product' ? 'Products' : id.charAt(0).toUpperCase() + id.slice(1)}
