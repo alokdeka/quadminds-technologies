@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './styles/index.css';
+import { useTheme } from './hooks/useTheme';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -50,6 +51,10 @@ function Layout() {
 }
 
 export default function App() {
+  // Initialises data-theme on <html> and syncs it — Navbar also calls this but
+  // having it at root guarantees it runs before the first paint.
+  useTheme();
+
   return (
     <BrowserRouter>
       <Layout />
