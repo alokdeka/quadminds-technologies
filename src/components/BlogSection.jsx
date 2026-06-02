@@ -22,7 +22,7 @@ export default function BlogSection() {
           Ideas on technology, product building, and the future of software — straight from the Quadminds team.
         </p>
 
-        <div className={`blog-grid${posts.length < 3 ? ' two-col' : ''}`}>
+        <div className="blog-grid">
           {posts.map(post => (
             <Link to={`/blog/${post.slug}`} key={post.slug} className="blog-card">
               {post.cover
