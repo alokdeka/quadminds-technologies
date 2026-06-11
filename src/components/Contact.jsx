@@ -4,12 +4,37 @@ import '../styles/ContactFooter.css';
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => setForm({ ...form, [e.target.id.replace('cf-', '')]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSent(true);
+    setLoading(true);
+    setError(false);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mpqejnbw', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(form)
+      });
+
+      if (response.ok) {
+        setSent(true);
+        setForm({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setError(true);
+      }
+    } catch (err) {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -27,6 +52,7 @@ export default function Contact() {
             <div className="contact-info-list">
               {[
                 { icon: '🌐', label: 'Website', val: 'quadmindstechnologies.in' },
+                { icon: '📞', label: 'Phone', val: '+91 70023 37118' },
                 { icon: '📍', label: 'Location', val: 'India 🇮🇳' },
                 { icon: '💼', label: 'Flagship Product', val: 'BookAdda — Student Book Exchange' },
               ].map((item) => (
@@ -83,8 +109,9 @@ export default function Contact() {
                   <label htmlFor="cf-message">Message</label>
                   <textarea id="cf-message" rows="5" placeholder="Tell us about your idea, inquiry, or opportunity..." value={form.message} onChange={handleChange}/>
                 </div>
-                <button type="submit" className="btn-submit" id="contact-submit">
-                  Send Message →
+                {error && <p style={{ color: '#EF4444', fontSize: 13, marginBottom: 12 }}>Failed to send message. Please try again.</p>}
+                <button type="submit" className="btn-submit" id="contact-submit" disabled={loading}>
+                  {loading ? 'Sending...' : 'Send Message →'}
                 </button>
               </form>
             )}
